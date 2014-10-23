@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Myriad'), local('Myriad'), url(../fonts/myriad/MyriadPro-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Myriad'), local('Myriad'), url(../fonts/myriad/MyriadPro-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Myriad';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Myriad'), local('Myriad'), url(../fonts/myriad/MyriadPro-It.woff) format('woff');
+}
+@font-face {
+  font-family: 'Myriad';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Myriad'), local('Myriad'), url(../fonts/myriad/MyriadPro-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Myriad';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Myriad'), local('Myriad'), url(../fonts/myriad/MyriadPro-SemiboldIt.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    font-weight: 600;
+    src: url('../fonts/centurygothic/century_bold.eot');
+    src: url('../fonts/centurygothic/century_bold.eot') format('embedded-opentype'),
+         url('../fonts/centurygothic/century_bold.woff') format('woff'),
+         url('../fonts/centurygothic/century_bold.ttf') format('truetype'),
+         url('../fonts/centurygothic/century_bold.svg#CenturyGothicBold') format('svg');
+}
+@font-face {
+    font-family: 'CenturyGothic';
+    font-weight:400;
+    src: url('../fonts/centurygothic/century.eot');
+    src: url('../fonts/centurygothic/century.eot') format('embedded-opentype'),
+         url('../fonts/centurygothic/century.woff') format('woff'),
+         url('../fonts/centurygothic/century.ttf') format('truetype'),
+         url('../fonts/centurygothic/century.svg#CenturyGothicRegular') format('svg');
+}
+
+body {	margin: 20px 0;}
+.head { height: 135px; background: url(../img/bg-head.jpg) top center; background-size: 100% 135px }
+.head img { padding-top:15px}
+
+.main-nav { height: 85px; background: url(../img/bg-mainnav.jpg) repeat-x; }
+ul.navigation a { padding:0; margin:0; background-color: none; transition: all ease 0.3s }
+ul.navigation a:hover { text-decoration:none}
+
+ul.navigation-footer { display: inline;  margin: 0;  list-style: none;  }
+ul.navigation-footer li { display: inline-block; padding: 20px 20px 0 5px;}
+ul.navigation-footer li ul { display:none; }
+
+ul.navigation {  text-align: left;  display: inline;  margin: 0;  padding: 15px 4px 17px 0;  list-style: none;  }
+ul.navigation a, ul.navigation-footer a { font-family: 'Myriad'; color: #fb8b3a; letter-spacing:1px }
+ul.navigation-footer a { color: #FFF}
+ul.navigation li { min-width:155px; text-align:center;  display: inline-block;  margin-right: -4px;  position: relative;  padding: 15px 20px; 
+  cursor: pointer;  -webkit-transition: all ease 0.2s;  -moz-transition: all ease 0.2s;  -ms-transition: all ease 0.2s;  -o-transition: all ease 0.2s;  transition: all ease 0.2s;
+  
+}
+ul.navigation li:hover {  background: #E94D34; /* Old browsers */
+background: -moz-linear-gradient(top,  #E94D34 0%, #C72400 43%, #C72400 50%, #E94D34 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E94D34), color-stop(43%,#C72400), color-stop(50%,#C72400), color-stop(100%,#E94D34)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #E94D34 0%,#C72400 43%,#C72400 50%,#E94D34 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #E94D34 0%,#C72400 43%,#C72400 50%,#E94D34 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #E94D34 0%,#C72400 43%,#C72400 50%,#E94D34 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #E94D34 0%,#C72400 43%,#C72400 50%,#E94D34 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E94D34', endColorstr='#E94D34',GradientType=0 ); /* IE6-9 */
+box-shadow: inset -2px 1px 6px rgba(0,0,0,0.8);
+-webkit-box-shadow: inset -1px 2px 6px rgba(0,0,0,0.8);
+ color: #000;
+}
+ul.navigation li:hover a { color:#000000 }
+ul.navigation li ul {
+  padding: 0;  position: absolute;  top: 52px;
+  left: 0;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+  z-index: 999;
+}
+ul.navigation li ul li {   background: rgba(255,255,255,0.6);   display: block;   color: #000; padding: 17px 5px 5px 10px;
+font-size: 90%;} 
+ul.navigation li ul li:hover { text-decoration:none; color:#FB8B3A; background: rgba(255,255,255,0.8) ; border-bottom: solid 1px #C72400}
+ul.navigation li:hover ul {  display: block;  opacity: 1;  visibility: visible;
+}
+
+
+
+.home-banner { background: url(../img/bg-banners.jpg) top center; background-size: 100% 100%; min-height:725px }
+
+.home-banner .carousel{ border: solid 10px #FFF; box-shadow: 0 0 25px rgba(0,0,0,0.8); width: 960px; margin: 50px auto; }
+.carousel-control.left { left: -60px; background: url(../img/banner-arrows.png) no-repeat 0 170px ; }
+.carousel-control.right { right: -60px; background: url(../img/banner-arrows.png) no-repeat -34px 170px  }
+.carousel-control { width: 25px; opacity:1 }
+
+
+.content-gray { background:url(../img/bg-content-gray.jpg) top center repeat-x; min-height:525px; padding-top:50px  }
+h2.orange-title { background:url(../img/bg-titles-orange.jpg); width:300px; height:48px;
+color: #FFF; text-transform:uppercase; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+font-family: 'CenturyGothic'; font-size: 150%; padding: 14px 2px 0 15px; }
+#la-compania p, #la-compania ul { font-family: 'CenturyGothic'; line-height:170%; margin-top:30px }
+
+.separador1 { width: 100%; height: 7px; 
+background: rgba(0,0,0,0.5); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(0,0,0,0.2)', endColorstr='rgba(0,0,0,0)',GradientType=0 ); /* IE6-9 */
+margin: 30px 0 20px}
+
+
+
+#clientess img {
+	transition: all .6s ease;
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+   opacity: 0.5;
+   
+   -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+#clientess img:hover { filter: none;    -webkit-filter: grayscale(0);   opacity: 1; }
+
+
+
+
+
+
+.footer { padding-top:50px; background: #414146; height: 450px; }
+.footer h4, .footer ul { font-family: 'Myriad'; letter-spacing: 1px }
+.footer h4, ul.navigation a, ul.navigation-footer a { text-transform:uppercase; }
+ul.navigation ul li a { text-transform: none}
+.footer h4 { color: #FFF; font-size: 95% }
+.footer ul { color: #FFF; font-size:80%;  margin:0; padding:0;}
+.footer ul li { list-style: none;  line-height: 250% }
+.footer ul li:before {content:"> "; color:#CF583A }
+.footer ul li a { color:#FFF;}
+.footer ul li a:hover { color:#FB8B3A; text-decoration:none}
+
+.footer-foot { background:#000; height:65px; color: #FFF }
+.footer-foot h5 { font-family:'CenturyGothic'; padding-top:15px; font-size: 85% }	
