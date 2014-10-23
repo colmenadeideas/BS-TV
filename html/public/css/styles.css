@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/futr-webfont.eot');
+    src: url('../fonts/futr-webfont.eot?#iefix') format('embedded-opentype'),
+url('../fonts/futr-webfont.woff') format('woff'),
+url('../fonts/futr-webfont.ttf') format('truetype'),
+url('../fonts/futr-webfont.svg#futuristregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	
+}
+body {
+	margin:0; padding:0;
+	background: url(../images/temp/bg.jpg) no-repeat top center;
+  	background-size: 100% auto;
+  	font-family: 'Futura';
+  	
+}
+div { letter-spacing: -0.5px}
+.container-full{
+	margin: 0px;
+	padding: 0px;
+  	width: 100%;
+  	height: 1500px;
+  	
+}
+
+.direccion { margin-top:20px}
+.no-pase1{
+	height: 61px;
+	width: 100%;
+	margin-top:61px;
+}
+.const-image{
+	height:477px;
+	width: 346px;
+	margin-left:271px;	
+	margin-top: 250px;
+}
+.logo{
+	width: 524px;
+	height: 134px;
+	margin: 250px 0px 0px 271px;
+}
+#boton_contact{
+	margin: 20px 0px 0px 271px;
+}
+p{
+	padding-left: 50px;
+}
+.direction{
+	margin: 70px 0px 0px 257px;
+}
+.mail{
+	margin: 20px 0px 0px 257px;
+}
+.telefonos{
+	margin: 20px 0px 0px 257px;
+}
+.boton_mail{
+	padding: 0px;
+}
+.btn-lg{
+	padding: 4px 16px;
+	border-radius: 0px;
+	background: #48474d;
+	color: #FFFFFF;
+}
+.location{
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.cel{
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.correo{
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.facebook{
+	float:right;
+	margin-top: 100px;
+	margin-right: 117px;
+}
+.g-plus{
+	float:right;
+	/*margin-left: 150px;*/
+	margin-top: 100px;
+}
+.cuadro-contacto{
+	height: 15px;
+	width: 250px;
+	background-color: #717174;
+	margin-top: 20px;
+	margin-left: 35px;
+}
+.botones{
+	height: 33px;
+box-shadow: 2px 2px 2px rgba(195,130,59,0.8);
+padding: 10px;
+	width: 210px;
+	background: url(../img/temp/buton-bg.gif);
+}
+.botones h4, .botones2 h5 { margin:0 auto; padding:0 }
+h5 { color: #FFF;}
+h4{
+	margin-top: -8px;
+	color: white;
+}
+
+.botones2{
+	height: 20px;
+box-shadow: 2px 2px 2px rgba(195,130,59,0.8);
+padding: 3px;
+	width: 190px;
+	background: url(../img/temp/buton-bg.gif);
+	background-size:auto 100%;
+}
+
+.direccion a { color: #000}
+.direccion a:hover { color: #FFF}
+.cuadro-mail{
+	height: 15px;
+	width: 280px;
+	background-color: #717174;
+	margin-top: -30px;
+	margin-left: 100px;
+}
+.cuadro-mail2{
+	height: 15px;
+	width: 280px;
+	background-color: #45434a;
+	margin-top: -15px;
+	margin-left: 100px;
+}
+#contact-web{
+	margin-left: 50px;
+	margin-top: 25px;
+}
