@@ -29,15 +29,18 @@
 			
 		</div>
 	</div>
+	<div id="clientes"><h3 class="text-center nuestros-clientes-title">Nuestros Clientes</h3></div>
 </div>
 <div class="content home-clientes">
 	<div class="container">
+		
 		<div id="nuestros-clientes">
+			
 			<p class="text-center">La seguridad y estabilidad que manejamos como empresa y la alta calidad de nuestros productos nos<br> 
-ha permitido mantener una cartera de clientes, usuarios de nuestros productos y servicios</p>
+ha permitido mantener una cartera de clientes, usuarios de nuestros productos y servicios<br><br></p>
  			
 			   
-			<div id="clientes" class="carousel slide" data-ride="carousel">
+			<div id="cliente" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    
 			    <?php 
@@ -88,7 +91,7 @@ ha permitido mantener una cartera de clientes, usuarios de nuestros productos y 
 					}
 					
 					$fullbody .= $start;
-					$fullbody .= '<div class="col-sm-1 col-lg-1"><a href="#"><img src="'. $filename .'" alt="'. $cliente["name"].'" class="img-responsive"></a></div>';
+					$fullbody .= '<div class="col-sm-1s col-lg-1s" style="float:left; width:90px; margin:10px"><a href="'.URL.'site/clientes/'.$cliente["id"].'"><img src="'. $filename .'" alt="'. $cliente["name"].'" class="img-responsive"></a></div>';
 					$fullbody .= $end;   
 						
 				 	//}
@@ -130,11 +133,9 @@ ha permitido mantener una cartera de clientes, usuarios de nuestros productos y 
 			 </div><!--carousel inner-->
 			
 			  <!-- Controls -->
-			  <a class="left carousel-control" href="#clientes" role="button" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  <a class="left carousel-control" href="#cliente" role="button" data-slide="prev">
 			  </a>
-			  <a class="right carousel-control" href="#clientes" role="button" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  <a class="right carousel-control" href="#cliente" role="button" data-slide="next">
 			  </a>
 			</div>
 			

@@ -28,6 +28,31 @@
 		public function lacompania() {				
 			$this->view->buildpage('aboutus');						
 		}
+		
+		public function clientes($id) {
+			
+			
+			$id = escape_value($id);
+			
+			$client = $this->model->getClient($id);
+			
+			$projects = $this->model->getProjects($id);
+			$i= 0;
+			foreach ($projects as $project) {
+				
+				$this->view->projects[$i] = $project;
+				$this->view->projects[$i]['cliente'] = $client[0]["name"];
+				$i++;
+			}
+			
+			
+			$this->view->buildpage('clientes');						
+		}
+		
+		public function contacto() {				
+			$this->view->buildpage('contact');						
+		}
+		
 	}
 
 ?>

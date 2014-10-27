@@ -14,7 +14,7 @@
 		}
 		public function getClient($id) {
 			
-			$result = DB::query("SELECT * FROM ". DB_PREFIX . "clientes WHERE id_cliente=%s AND status = 'active'", $id);
+			$result = DB::query("SELECT * FROM ". DB_PREFIX . "clientes WHERE id=%s AND status = 'active'", $id);
 			return $result;
 		}
 		

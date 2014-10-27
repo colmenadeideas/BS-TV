@@ -1,1 +1,1 @@
-<div class="col-lg-5 col-md-5 pull-right" style="background: red">Buscador</div>
+<!--div class="col-lg-5 col-md-5 pull-right" style="background: red">Buscador</div-->

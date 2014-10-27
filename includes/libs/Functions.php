@@ -1,13 +1,13 @@
 <?php
 
 	function escape_value($data) {
-	if( ini_get ( 'magic_quotes_gpc') ) {
-		$data = stripslashes($data);
+		if( ini_get ( 'magic_quotes_gpc') ) {
+			$data = stripslashes($data);
+		}
+		$data =	strip_tags($data, '<p><a><br>');
+	    return mysql_real_escape_string($data);   //use this if local
+		//return mysql_escape_string($data); //use this for server
 	}
-	$data =	strip_tags($data, '<p><a><br>');
-    return mysql_real_escape_string($data);   //use this if local
-	//return mysql_escape_string($data); //use this for server
-}
 	
 	function strip_zeros_from_date($marked_string="") {
 		$no_zeros = str_replace('*0','', $marked_string);
@@ -22,7 +22,29 @@
 		$data = str_replace(",", "", $data);//remover comas
 		return $data;
 	}
-	
+
+	function filesInDir($tdir)	{ //funcion para abrir la carpeta y leer las fotos disponibles
+		$dirs = scandir($tdir);
+		foreach($dirs as $file)	{
+			if (($file == '.')||($file == '..')) {
+			}
+			elseif (is_dir($tdir.'/'.$file)){
+				filesInDir($tdir.'/'.$file);
+			}
+			else {
+				//Excluir logo							
+				$pos = strpos($file, "s");
+				if ($pos === false) { //Si el archivo no contiene s en su nombre, listar
+					$ver= $tdir."/".$file;
+					list($ancho, $alto, $tipo, $atributos) = getimagesize($ver);
+					echo "<img src='".$tdir."/".$file."' ".$atributos." />";
+				} else {
+					//Si el archivo se llama 's'algo lo omite porque es un thumb
+				}
+			}	
+		}
+	}
+		
 	//--- Funcion para adicionar 0 delante
 	function zerofill ($num,$zerofill) {
 	   while (strlen($num)<$zerofill) {

@@ -29,7 +29,7 @@
 	  	</ul>
 	  </li>
 	  <li>
-	  	<a href="#">Contacto</a>
+	  	<a href="<?php echo URL; ?>site/contacto">Contacto</a>
 	  	<ul>
 	  		<?php $this->render('default/menu/contacto'); ?>	
 	  	</ul>	  	
